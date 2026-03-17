@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Store - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Premium Store</a>
+            <div class="nav-links">
+                <a href="admin.html">Admin Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="categories" id="categoryContainer">
+            <!-- Categories will be dynamically loaded here by main.js -->
+            <button class="cat-btn active">All</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be dynamically loaded here by main.js -->
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times; Back</button>
+            <div class="modal-grid">
+                <div class="modal-gallery">
+                    <img id="modalMainImage" src="" alt="Product" class="main-image">
+                    <div id="modalThumbnails" class="thumbnails">
+                        <!-- Thumbnails injected via JS -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <div id="modalCategory" class="product-category"></div>
+                    <h2 id="modalTitle" class="modal-title"></h2>
+                    <div id="modalPrice" class="modal-price"></div>
+                    <p id="modalDescription" class="modal-description"></p>
+                    <a href="#" id="modalWhatsAppBtn" target="_blank" class="btn" style="margin-top: 2rem;">Order via
+                        WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/store.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
